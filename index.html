@@ -38,7 +38,7 @@
         name: "Глеб Фокин",
         date: new Date(),
         text: "Это будет первый комментарий на этой странице",
-        likes: 3,
+        likes: 4,
 
       },
       {
@@ -57,7 +57,7 @@
         <li class="comment" data-index="${index}">
           <div class="comment-header">
             <div>${comment.name}</div>
-            <div>${comment.date.toLocaleDateString()}</div>
+            <div>${comment.date.toLocaleString()}</div>
           </div>
           <div class="comment-body">
             <div class="comment-text">
@@ -83,12 +83,18 @@
     const buttonForm = document.getElementById("form-button");
 
     buttonForm.addEventListener("click", () => {
+
       const newComment = {
         name: name.value,
         date: new Date(),
         text: text.value,
         likes: 0,
       };
+
+      if (!name.value || !text.value) {
+        alert('Пожалуйста, заполните все поля');
+        return;
+      }
 
       comments.push(newComment);
 
