@@ -32,6 +32,10 @@
 
   <script>
     "use strict";
+    
+    const sanitizeHtml = (value) => {
+      return value.replaceAll("<", "&lt;").replaceAll(">", "&gt;");
+    };
 
     const comments = [
       {
@@ -80,7 +84,9 @@
       const likeButtons = document.querySelectorAll(".like-button")
 
       for (const likeButton of likeButtons) {
-        likeButton.addEventListener("click", () => {
+        likeButton.addEventListener("click", (event) => {
+          event.stopPropagation();
+
           const index = likeButton.dataset.index;
           const comment = comments[index];
 
@@ -90,6 +96,16 @@
           comment.isLiked = !comment.isLiked;
 
           renderComments();
+        });
+      }
+
+      const commentsElements = document.querySelectorAll(".comment");
+
+      for (const  commentElement of commentsElements) {
+
+        commentElement.addEventListener("click", () => {
+          const currentComment = comments[commentElement.dataset.index];
+          text.value = `${currentComment.name}: ${currentComment.text}`;
         });
       }
 
@@ -103,15 +119,18 @@
 
     buttonForm.addEventListener("click", () => {
 
+      const nameValue = name.value.trim();
+      const textValue = text.value.trim();
+
       const newComment = {
-        name: name.value,
+        name: sanitizeHtml(name.value),
         date: new Date(),
-        text: text.value,
+        text: sanitizeHtml(text.value),
         likes: 0,
         isLiked: false,
       };
 
-      if (!name.value || !text.value) {
+      if (!nameValue || !textValue) {
         alert('Пожалуйста, заполните все поля');
         return;
       }
