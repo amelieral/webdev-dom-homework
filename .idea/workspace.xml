@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d7098a08-886d-4541-a088-450ed2c5cd5e" name="Changes" comment="Added a like function">
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="hw2" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2udmkxzkyHBZdyKRAMnI1ayz6FW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.index.html.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "hw4",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/webdev-dom-homework/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d7098a08-886d-4541-a088-450ed2c5cd5e" name="Changes" comment="" />
+      <created>1742586971676</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742586971676</updated>
+      <workItem from="1742586972777" duration="3019000" />
+      <workItem from="1742753059428" duration="7919000" />
+      <workItem from="1742976600880" duration="1921000" />
+      <workItem from="1743008220083" duration="657000" />
+      <workItem from="1743175424143" duration="4882000" />
+      <workItem from="1744055733029" duration="1453000" />
+      <workItem from="1744208803780" duration="3475000" />
+      <workItem from="1744241912082" duration="643000" />
+      <workItem from="1744808138719" duration="1413000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added script for creating comments">
+      <option name="closed" value="true" />
+      <created>1742760895041</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1742760895041</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added script for creating comments">
+      <option name="closed" value="true" />
+      <created>1742761234061</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1742761234061</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fixed script for creating comments">
+      <option name="closed" value="true" />
+      <created>1742978521178</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1742978521178</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fixed script for creating comments">
+      <option name="closed" value="true" />
+      <created>1743008280082</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743008280082</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added a like function">
+      <option name="closed" value="true" />
+      <created>1743179387973</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1743179387973</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added a like function">
+      <option name="closed" value="true" />
+      <created>1743179508678</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1743179508679</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added a like function">
+      <option name="closed" value="true" />
+      <created>1743179593570</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1743179593570</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added a like function">
+      <option name="closed" value="true" />
+      <created>1743179730592</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1743179730592</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added script for creating comments" />
+    <MESSAGE value="Fixed script for creating comments" />
+    <MESSAGE value="Added a like function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a like function" />
+  </component>
+</project>
