@@ -3,7 +3,7 @@ export const comments = [
       name: "Глеб Фокин",
       date: new Date(),
       text: "Это будет первый комментарий на этой странице!",
-      likes: 2,
+      likes: 1,
       isLiked: true,
 
     },
