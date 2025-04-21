@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d7098a08-886d-4541-a088-450ed2c5cd5e" name="Changes" comment="Added a like function">
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.prettierrc.yaml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +38,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "hw4",
+    "last_opened_file_path": "C:/Users/79315/Desktop/practice",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -72,6 +74,7 @@
       <workItem from="1744208803780" duration="3475000" />
       <workItem from="1744241912082" duration="643000" />
       <workItem from="1744808138719" duration="1413000" />
+      <workItem from="1745178600184" duration="29000" />
     </task>
     <task id="LOCAL-00001" summary="Added script for creating comments">
       <option name="closed" value="true" />

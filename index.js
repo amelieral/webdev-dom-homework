@@ -1,3 +1,3 @@
-import { renderComments } from "./modules/renderComments.js";
+import { renderComments } from './modules/renderComments.js';
 
-renderComments ();
+renderComments();
