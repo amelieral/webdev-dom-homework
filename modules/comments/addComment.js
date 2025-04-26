@@ -3,32 +3,34 @@ import { renderComments } from './renderComments.js';
 import { sanitizeHtml } from '../../helpers/sanitizeHtml.js';
 
 export const addComment = () => {
-    const name = document.getElementById('add-name');
-    const text = document.getElementById('add-text');
+    const nameInput = document.getElementById('add-name');
+    const textInput = document.getElementById('add-text');
     const buttonForm = document.getElementById('form-button');
 
-    buttonForm.addEventListener('click', () => {
-        const nameValue = name.value.trim();
-        const textValue = text.value.trim();
+    buttonForm.replaceWith(buttonForm.cloneNode(true));
+    const freshButton = document.getElementById('form-button');
 
-        const newComment = {
-            name: sanitizeHtml(name.value),
-            date: new Date(),
-            text: sanitizeHtml(text.value),
-            likes: 0,
-            isLiked: false,
-        };
+    freshButton.addEventListener('click', () => {
+        const nameValue = nameInput.value.trim();
+        const textValue = textInput.value.trim();
 
         if (!nameValue || !textValue) {
             alert('Пожалуйста, заполните все поля');
             return;
         }
 
-        comments.push(newComment);
+        const newComment = {
+            name: sanitizeHtml(nameValue),
+            date: new Date(),
+            text: sanitizeHtml(textValue),
+            likes: 0,
+            isLiked: false,
+        };
 
+        comments.push(newComment);
         renderComments();
 
-        name.value = '';
-        text.value = '';
+        nameInput.value = '';
+        textInput.value = '';
     });
 };
