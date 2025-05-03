@@ -1,5 +1,6 @@
 import { addComment } from './addComment.js';
 import { comments } from '../../data/comments.js';
+import { setupLikeHandlers } from './likeHandlers.js';
 const callback = (comment, index) => {
     return `
 <li class="comment" data-index="${index}">
@@ -20,24 +21,6 @@ const callback = (comment, index) => {
 </div>
 </li>
 `;
-};
-const setupLikeHandlers = () => {
-    const likeButtons = document.querySelectorAll('.like-button');
-
-    likeButtons.forEach((likeButton) => {
-        likeButton.addEventListener('click', (event) => {
-            event.stopPropagation();
-            const index = likeButton.dataset.index;
-            const comment = comments[index];
-
-            comment.likes = comment.isLiked
-                ? comment.likes - 1
-                : comment.likes + 1;
-            comment.isLiked = !comment.isLiked;
-
-            renderComments();
-        });
-    });
 };
 
 const setupQuoteHandlers = () => {
