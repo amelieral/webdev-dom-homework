@@ -1,6 +1,7 @@
-import { comments } from '../../data/comments.js';
+import { comments, updateComments } from '../../data/comments.js';
 import { renderComments } from './renderComments.js';
 import { sanitizeHtml } from '../../helpers/sanitizeHtml.js';
+import { postComment } from './api.js';
 
 export const addComment = () => {
     const nameInput = document.getElementById('add-name');
@@ -19,18 +20,13 @@ export const addComment = () => {
             return;
         }
 
-        const newComment = {
-            name: sanitizeHtml(nameValue),
-            date: new Date(),
-            text: sanitizeHtml(textValue),
-            likes: 0,
-            isLiked: false,
-        };
-
-        comments.push(newComment);
-        renderComments();
-
-        nameInput.value = '';
-        textInput.value = '';
+        postComment(sanitizeHtml(textValue), sanitizeHtml(nameValue)).then(
+            (data) => {
+                updateComments(data);
+                renderComments();
+                nameInput.value = '';
+                textInput.value = '';
+            },
+        );
     });
 };
