@@ -20,8 +20,14 @@ export const addComment = () => {
             return;
         }
 
+        document.querySelector('.loading').style.display = 'block';
+        document.querySelector('.add-form').style.display = 'none';
+
         postComment(sanitizeHtml(textValue), sanitizeHtml(nameValue)).then(
             (data) => {
+                document.querySelector('.loading').style.display = 'none';
+                document.querySelector('.add-form').style.display = 'flex';
+
                 updateComments(data);
                 renderComments();
                 nameInput.value = '';
