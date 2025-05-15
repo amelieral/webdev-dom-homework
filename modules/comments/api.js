@@ -3,6 +3,9 @@ const host = `https://wedev-api.sky.pro/api/v1/nastya-mei`;
 export const fetchComments = () => {
     return fetch(host + '/comments')
         .then((response) => {
+            if (!response.ok) {
+                throw new Error('Ошибка при загрузке комментариев');
+            }
             return response.json();
         })
         .then((responseData) => {
@@ -17,6 +20,10 @@ export const fetchComments = () => {
             });
 
             return listComments;
+        })
+        .catch((error) => {
+            console.error(error);
+            throw error;
         });
 };
 
