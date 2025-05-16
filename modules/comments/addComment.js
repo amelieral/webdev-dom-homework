@@ -23,8 +23,8 @@ export const addComment = () => {
         document.querySelector('.loading').style.display = 'block';
         document.querySelector('.add-form').style.display = 'none';
 
-        postComment(sanitizeHtml(textValue), sanitizeHtml(nameValue)).then(
-            (data) => {
+        postComment(sanitizeHtml(textValue), sanitizeHtml(nameValue))
+            .then((data) => {
                 document.querySelector('.loading').style.display = 'none';
                 document.querySelector('.add-form').style.display = 'flex';
 
@@ -32,7 +32,22 @@ export const addComment = () => {
                 renderComments();
                 nameInput.value = '';
                 textInput.value = '';
-            },
-        );
+            })
+            .catch((error) => {
+                document.querySelector('.loading').style.display = 'none';
+                document.querySelector('.add-form').style.display = 'flex';
+
+                if (error.message === 'Failed to fetch') {
+                    alert('Кажется, у вас сломался интернет, попробуйте позже');
+                }
+
+                if (error.message === 'Ошибка сервера') {
+                    alert('Сервер сломался, попробуй позже');
+                }
+
+                if (error.message === 'Неверный запрос') {
+                    alert('Имя и комментарий должны быть не короче 3 символов');
+                }
+            });
     });
 };
