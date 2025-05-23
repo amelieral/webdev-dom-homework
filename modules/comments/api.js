@@ -70,13 +70,37 @@ export const postComment = (text, name) => {
 };
 
 export const login = (login, password) => {
+    if (!login.trim() || !password.trim()) {
+        alert('Пожалуйста, заполните все поля');
+        return Promise.reject();
+    }
+
     return fetch(authorHost + '/login', {
         method: 'POST',
-        body: JSON.stringify({ login: login, password: password }),
+        body: JSON.stringify({ login, password }),
+    }).then((response) => {
+        if (!response.ok) {
+            return response
+                .json()
+                .then((errorData) => {
+                    const errorMessage =
+                        errorData.error || 'Неверный логин или пароль';
+                    throw new Error(errorMessage);
+                })
+                .catch(() => {
+                    throw new Error('Неверный логин или пароль');
+                });
+        }
+        return response.json();
     });
 };
 
 export const registration = (name, login, password) => {
+    if (!name.trim() || !login.trim() || !password.trim()) {
+        alert('Пожалуйста, заполните все поля');
+        return Promise.reject();
+    }
+
     return fetch(authorHost, {
         method: 'POST',
         body: JSON.stringify({ name: name, login: login, password: password }),

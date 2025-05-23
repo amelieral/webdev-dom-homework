@@ -45,13 +45,13 @@ export const renderLogin = () => {
 
     submitButtonEl.addEventListener('click', () => {
         login(loginEl.value, passwordEl.value)
-            .then((response) => {
-                return response.json();
-            })
             .then((data) => {
                 setToken(data.user.token);
                 setName(data.user.name);
                 fetchAndRenderComments();
+            })
+            .catch((error) => {
+                alert(error.message);
             });
     });
 };
